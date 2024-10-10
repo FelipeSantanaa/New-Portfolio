@@ -1,482 +1,1778 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
 
+  <!-- Page Title -->
   <title>Portfolio | Felipe Alves</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Meta Tags -->
+  <meta name="description" content="Me chamo Felipe Alves, sou Desenvolvedor Front End especializado em Angular, TypeScript e soluções web modernas. Transformo ideias em interfaces responsivas, dinâmicas e intuitivas. Vamos inovar juntos!">
+  <meta name="keywords" content="Felipe Alves, Desenvolvedor Front End, Angular, TypeScript, JavaScript, HTML5, CSS3, SASS, RxJS, NgRx, desenvolvimento web, interfaces responsivas, design de interface, soluções web, aplicações web, programador front end, tecnologia web, inovação digital">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Viewport Meta-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Favicon & Icons Start -->
+  <link rel="icon" href="img/favicon/ico.ico" sizes="any">
+  <link rel="icon" href="img/favicon/ico.ico" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="img/favicon/manifest.webmanifest">
+  <!-- Template Favicon & Icons End -->
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Facebook Metadata Start -->
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:title" content="Portfolio - Felipe Alves">
+  <meta name="description" content="Me chamo Felipe Alves, sou Desenvolvedor Front End especializado em Angular, TypeScript e soluções web modernas. Transformo ideias em interfaces responsivas, dinâmicas e intuitivas. Vamos inovar juntos!">
+  <meta property="og:url" content="https://felipealves.dev">
+  <!-- Facebook Metadata End -->
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.9.1
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Template Styles Start -->
+  <link rel="stylesheet" href="css/loaders/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Template Styles End -->
+
+  <!-- Custom Browser Color Start -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <meta name="msapplication-navbutton-color" content="#111111">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Custom Browser Color End -->
+  <style>
+    @media only screen and (min-width: 1200px) {
+      .header {
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      transition: 0.4s linear;
+    }
+
+    .header::before,
+    .header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        border-top: 0.2px solid rgba(225, 255, 0, 0.6);
+        border-bottom: 0.2px solid rgba(225, 255, 0, 0.6);
+        transition: width 0.8s linear;
+        z-index: -1;
+    }
+
+    .header::before {
+        left: 50%;
+    }
+
+    .header::after {
+        right: 50%;
+    }
+
+    .header.scroll-effect {
+      top: 0;
+      /* font-size: 1.4rem !important; */
+    }
+
+    .header.scroll-effect::before,
+    .header.scroll-effect::after {
+        width: 50%;
+    }
+    }
+</style>
 </head>
 
-<body>
+<body class="magicpattern">
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="Profile Chile" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Felipe Alves</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/FelipeSantanaa" target="_blank" class="instagram"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/felipe-santana-alves/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.curriculo.felipealves.dev" target="_blank" class="curriculo"><i class="bx">CV</i></a>
-        </div>
+  <!-- Loader Start -->
+  <div id="loader" class="loader">
+    <div id="loaderContent" class="loader__content">
+      <!-- <div class="loader__shadow"></div>
+      <div class="loader__box"></div> -->
+      <img class="loading-memoji-img"src="img/598d3c49-72d9-4382-971c-703cd76dad89.webp" alt="" style="width: 250px; height: 250px;">
+      <div class="ps-3">
+          <p class="loaderText">Olá, Mundo!</p>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experiência Profissional</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contato</span></a></li>
+    </div>
+
+  </div>
+  <!-- Loader End -->
+
+  <!-- Header Start -->
+  <header id="header" class="header d-flex justify-content-between">
+
+    <!-- Navigation Menu Start -->
+    <div class="header__navigation">
+      <nav id="menu" class="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item">
+            <a class="menu__link btn" href="#home">
+              <span class="menu__caption">Home</span>
+              <i class="ph-bold ph-house-simple"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#about">
+              <span class="menu__caption">Sobre mim</span>
+              <i class="ph-bold ph-user"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#resume">
+              <span class="menu__caption">Resumo</span>
+              <i class="ph-bold ph-article"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#portfolio">
+              <span class="menu__caption">Portfolio</span>
+              <i class="ph-bold ph-squares-four"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#contact">
+              <span class="menu__caption">Contato</span>
+              <i class="ph-bold ph-envelope"></i>
+            </a>
+          </li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
     </div>
-  </header><!-- End Header -->
+    <!-- Navigation Menu End -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Felipe Alves</h1>
-      <p>I'm <span class="typed" data-typed-items="Developer, Gamer, Student"></span></p>
+    <!-- Header Controls Start -->
+    <div class="header__controls d-flex justify-content-end align-items-center">
+      <div class="d-none d-xl-flex gap-lg-5 px-lg-5">
+        <a href="https://github.com/FelipeSantanaa" target="_blank" class="anchor-svg-nav">        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-github" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+        </svg></a>
+        <a href="https://www.linkedin.com/in/felipe-santana-alves/" target="_blank" class="anchor-svg-nav">        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+        </svg></a>
+      </div>
+      <button id="color-switcher" class="color-switcher header__switcher btn d-none" type="button" role="switch"
+        aria-label="light/dark mode" aria-checked="true"></button>
+      <a id="notify-trigger" class="header__trigger btn"
+        href="#contact">
+        <span class="trigger__caption">Vamos conversar</span>
+        <i class="ph-bold ph-chat-dots"></i>
+      </a>
     </div>
-  </section><!-- End Hero -->
+    <!-- Header Controls End -->
 
-  <main id="main">
+  </header>
+  <!-- Header End -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
 
-        <div class="section-title">
-          <h2>Sobre</h2>
-          <p>Me chamo Felipe e tenho 22 anos. Atualmente, trabalho como Desenvolvedor Web Full Stack. Desenvolvo diversos projetos pessoais para aprimorar minhas Skills.<br>
-            Hoje, minha Stack atual é Java, SQL &amp; Angular, porém possuo experiência utilizando outras ferramentas, como: <br>
-            NodeJS, JavaScript, Typescript, WordPress.
-          </p>
-        </div>
+  <!-- Page Content Start -->
+  <div id="content" class="content">
+    <div class="content__wrapper">
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/memoji-felipe2.png" class="img-fluid rounded" alt="Selfie Chile">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Full Stack Developer &amp; Web Developer.</h3>
-            <p class="fst-italic">
-              Técnologo em Análise e Desenvolvimento de Sistemas pela <b>FMU</b> e certificado pela <b>Digital House</b> como Desenvolvedor Full Stack.
+      <!-- Intro Section Start -->
+      <section id="home" class="main intro">
+
+        <!-- Headline Start -->
+        <div class="">
+          <div id="headline" class="headline d-flex align-items-start flex-column" data-speed="1">
+            <p class="headline__subtitle animate-headline">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+                fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                    C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                    C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+              </svg>
+              <span class="">Vamos construir algo incrível juntos!</span>
             </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/felipe-santana-alves/" target="_blank">Felipe Alves</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Telefone:</strong> <span>+55 11 98675-6857</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>São Paulo, Brasil</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Idade:</strong> <span>22</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>felipe008_@hotmail.com</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Algumas das tecnologias que mais utilizo no meu dia como desenvolvedor </p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="pt-1 pb-5">
+              <h1 class="headline__title animate-headline">Felipe Alves<span class="headline__title__role"><br></span>
+              </h1>
+              <h3 class="role">Desenvolvedor Front-end</h3>
             </div>
 
-            <div class="progress">
-              <span class="skill">CSS<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Angular<i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">GIT/GitHub<i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">Typescript<i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Javascript<i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">SQL Server<i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">NodeJS<i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Experiências</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Resume</h3>
-            <div class="resume-item pb-0">
-              <h4>Felipe Alves</h4>
-              <p><em>Desenvolvedor Full Stack com +2 anos de experiência em Desenvolvimento Front-End.</em></p>
-              <ul>
-                <li>São Paulo, Brasil.</li>
-                <li>+55 (11) 98675-6857</li>
-                <li>felipe008_@hotmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Educação</h3>
-            <div class="resume-item">
-              <h4>Full Stack Developer </h4>
-              <h5>2021 - 2022</h5>
-              <p><em>Digital House, Brasil</em></p>
-              <p>Curso com foco em Desenvolvimento Web Full Stack.</p>
-              <p>Como projeto final, desenvolvemos uma réplica do <a href="https://linktr.ee/" target="_blank">Linktree.</a> Para ver o projeto<a href="https://github.com/FelipeSantanaa/LinkGroup" target="_blank"> Clique aqui.</a> </p>
-            </div>
-            <div class="resume-item">
-              <h4>Técnologo em Análise e Desenvolvimento de Sistemas</h4>
-              <h5>2019 - 2021</h5>
-              <p><em>Centro Universitário - FMU</em></p>
-              <p>Curso superior técnico com o objetivo de formar profissionais preparados para desempenhar funções analíticas e práticas relacionadas a sistemas computacionais de informação.</p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Experiência Profissional</h3>
-            <div class="resume-item">
-              <h4>Full Stack Developer Jr.</h4>
-              <h5>2022 - Atual</h5>
-              <p><em>Yabá Consultoria, Brasil</em></p>
-              <p>Utilizando a Stack Angular, Java e SQL para desenvolver e aprimorar projetos para os clientes da
-                empresa</p>
-              <ul>
-                <li>Desenvolvimento de aplicações web utilizando Angular, Typescript, NodeJs/Java, trazendo soluções
-                  para a empresa e aos demais clientes.</li>
-                <li> Utilização frameworks e bibliotecas para o desenvolvimento de novas aplicações.</li>
-                <li>Utilização de banco de dados SQL para administração dos dados.</li>
-                <li>Utilização do método Kanban para organização das tarefas.</li>
-                <li>Utilização da AWS, como Secrets, S3 e Lambda para o desenvolvimento de algumas aplicações.</li>
-                <li>Prototipação de novos layouts junto com a equipe de comunicação utilizando Figma.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Suporte</h4>
-              <h5>2018 - 2022</h5>
-              <p><em>Colégio Henri Wallon, Brasil</em></p>
-              <ul>
-                <li>Responsável pela manutenção dos computadores.</li>
-                <li>Auxiliar professores e alunos com novas tecnologias</li>
-                <li>Administração de todos os usuários pelo Google Admin</li>
-                <li>Experiência em ferramentas Google</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Auxiliar Administrativo</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Newbee Comercial, Brasil</em></p>
-              <ul>
-                <li>Recepcionar visitantes</li>
-                <li>Realizar contatos com clientes de modo ativo e receptivo</li>
-                <li>Realizar negociações e formalizar propostas de fornecedores</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Projetos pessoais desenvolvidos.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Projetos</li>
-              <li data-filter=".filter-freela">Freelancer</li>
-              <li data-filter=".filter-job">Sem compromisso</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-freela">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="Alfa Repro">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Site desenvolvido para uma Gráfica localizada dentro de uma faculdade"><i class="bx bx-plus"></i></a>
-                <a href="https://www.alfarepro.com/" target="_blank" title="Visitar a página"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-freela">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="Clínica Odontológica">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Site desenvolvido para uma Clínica Odontológica"><i class="bx bx-plus"></i></a>
-                <a href="https://clinica-odontologica.vercel.app/" target="_blank" title="Visitar a página"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-freela">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="Yabá Consultoria">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Site desenvolvido para uma Consultoria."><i class="bx bx-plus"></i></a>
-                <a href="#" title="Visitar a Página"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-job">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="Linkgroup">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Esse projeto foi realizado em grupo em um Projeto Integrador do curso de FullStack Developer pela Digital House. Nele, clonamos o Linktree e as funcionalidades da plataforma"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/FelipeSantanaa/LinkGroup" target="_blank" title="Visitar o Projeto"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-job">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="Pokedéx">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pokedéx sendo desenvolvida para aprimorar habilidades com desenvolvimento de páginas, falta finalizar."><i class="bx bx-plus"></i></a>
-                <a href="https://pokedex-eight-azure.vercel.app/" target="_blank" title="Visitar Página"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-freela">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="API">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="API desenvolvida em NodeJS para receber imagens, tratar o título e enviar para um BucketS3 na AWS."><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/FelipeSantanaa/api-upload-images" target="_blank" title="Visitar Projeto"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contato</h2>
-          <p>Se você se interessou em conversar comigo sobre alguma coisa, entre em contato pelo lugar que você preferir.</p>
-          <p>Aqui em baixo está as minhas redes, fique a vontade em se comunicar em qualquer uma delas.</p><br>
-          <span>See you!</span>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-linkedin"></i>
-                <h4>LinkedIn:</h4>
-                <p><a href="https://www.linkedin.com/in/felipe-santana-alves/" target="_blank">Felipe Alves</a></p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>felipe008_@hotmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Telefone:</h4>
-                <p>+55 (11) 98675-6857</p>
-              </div>
-              
-              <div class="github">
-                <i class="bi bi-github"></i>
-                <h4>GitHub:</h4>
-                <p><a href="https://github.com/FelipeSantanaa" target="_blank">Felipe Alves</a></p>
-              </div>
-
-
-            </div>
-
-          </div>
-
-          <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+            <div class="headline__btnholder d-flex flex-column flex-sm-row gap-4 xl-gap-0">
+              <div class=" card-wrapper shadow-box">
+                <div class="card-content">
+                  <a class="btn-default btn-hover-accent-mobile btn-principal" href="#portfolio">
+                    <span class="btn-caption">Sobre mim</span>
+                  </a>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+              <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline xl-ms-5"
+                href="/assets/Felipe-Alves-setembro-2024.pdf" download="Felipe-Alves-curriculo.pdf">
+                <span class="btn-caption">Download CV</span>
+                <i class="ph-bold ph-download-simple"></i>
+              </a>
+            </div>
+          </div>
+          <video src="img/header-mobile-memoji.webm" autoplay loop muted class="header-mobile-memoji"></video>
+          <video src="img/header-memoji.webm" autoplay loop muted class="header-memoji">
+            <!-- <source src="img/memoji.mp4" type="video/mp4"> -->
+            Seu navegador não suporta vídeo HTML5.
+
+          </video>
+          <!-- <img src="img/coc-o-unscreen.gif" alt="" style="width: 1340px;" class="header-memoji"> -->
+        </div>
+        <!-- <div class="text-center">
+            <a class="mouse-scroll" href="#"> 
+              <span class="mouse">
+                <span class="mouse-movement"> 
+                </span>
+              </span>
+
+              <span class="mouse-message fadeIn">scroll</span> 
+            </a>
+           </div> -->
+        <div class="magicpattern"></div>
+
+        <!-- Headline End -->
+
+        <!-- Scroll Button Start -->
+        <!-- <div class="rotating-btn">
+          <a href="#portfolio" class="rotating-btn__link slide-down"> -->
+            <!-- SVG rotating text -->
+            <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve"
+              class="animate-rotation" data-value="360">
+              <defs>
+                <path id="textPath"
+                  d="M110,59.5c0,27.6-22.4,50-50,50s-50-22.4-50-50s22.4-50,50-50S110,31.9,110,59.5z" />
+              </defs>
+              <g>
+                <use xlink:href="#textPath" fill="none"></use>
+                <text> -->
+                  <!-- button text here!!! -->
+                  <!-- <textPath xlink:href="#textPath">Scroll for More * Scroll for More * </textPath> -->
+                <!-- </text>
+              </g>
+            </svg> -->
+            <!-- arrow icon -->
+            <!-- <i class="ph-bold ph-arrow-down"></i> -->
+          <!-- </a>
+        </div> -->
+        <!-- Scroll Button End -->
+
+      </section>
+      <div class="decor mt-5">
+        <!-- Marquee Start -->
+        <a class="marquee marquee-relative" target="_blank">
+          <div class="marquee-content scroll">
+            <span>Desenvolvedor Front-end</span>
+            <span>+ 2 anos de experiência</span>
+            <span>Desenvolvedor Front-end</span>
+            <span>+ 2 anos de experiência</span>
+          </div>
+          <div class="marquee-content scroll text-center">
+            <span>Desenvolvedor Front-end</span>
+            <span>+ 2 anos de experiência</span>
+            <!-- <img src="img/real.webp" alt="" style="width: 20px; height: 20px;"> -->
+            <span>Desenvolvedor Front-end</span>
+            <span>+ 2 anos de experiência</span>
+          </div>
+          <div class="marquee-content scroll">
+            <span>Desenvolvedor Front-end</span>
+            <span>+ 2 anos de experiência</span>
+            <span>Desenvolvedor Front-end</span>
+            <span>+ 2 anos de experiência</span>
+          </div>
+        </a>
+        <!-- Marquee End -->
+      </div>
+      <!-- Intro Section End -->
+      <!-- About Section Start -->
+      <div class="second-background">
+
+
+        <section id="about" class="inner about" style="z-index: 0;">
+          <!-- Content Block - H2 Section Title Start -->
+          <div class="content__block section-grid-title">
+            <p class="h2__subtitle animate-in-up shadow-box">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+                fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                          C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                          C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+              </svg>
+              <span>Sobre mim</span>
+            </p>
+            <h2 class="h2__title animate-in-up">Criando Soluções Que Transformam Ideias</h2>
+          </div>
+          <!-- Content Block - H2 Section Title End -->
+
+          <!-- Content Block - Achievements Start -->
+          <div class="content__block grid-block">
+            <div class="achievements d-flex flex-column flex-md-row align-items-md-stretch">
+              <!-- achievements single item -->
+              <!-- <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+                        <div class="achievements__card">
+                          <p class="achievements__number">40+</p>
+                          <p class="achievements__descr">Happy clients</p>
+                        </div>
+                      </div> -->
+              <!-- achievements single item -->
+              <!-- <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+                        <div class="achievements__card">
+                          <p class="achievements__number">2+</p>
+                          <p class="achievements__descr">Years of experience</p>
+                        </div>
+                      </div> -->
+              <!-- achievements single item -->
+              <!-- <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+                        <div class="achievements__card">
+                          <p class="achievements__number">50+</p>
+                          <p class="achievements__descr">Projects done</p>
+                        </div>
+                      </div> -->
+            </div>
+          </div>
+          <!-- Content Block - Achievements End -->
+
+          <!-- Content Block - About Me Data Start -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0 justify-content-between">
+
+                <!-- About Me Description Start -->
+                <div class="col-12 col-xl-6 grid-item about-descr">
+                  <p class="about-descr__text animate-in-up">
+                    Me chamo <span class="text-link-bold">Felipe</span>, tenho 23 anos e sou programador Front-end com 2 anos de experiência.
+                    Sempre fui atraído pelas inovações e tecnologia, e foi esses desafios que me levaram a seguir carreira como Desenvolvedor.
+                  </p>
+                  <p class="about-descr__text animate-in-up">
+                    Atualmente, trabalho com Angular e Java, desenvolvendo soluções web para diferentes projetos. Além dessa experiência como prestador de serviços,
+                   também dedico parte do meu tempo para <span class="text-link-bold"> projetos pessoais, estudos e projetos freelancer.</span>
+                  </p>
+                  <p class="about-descr__text animate-in-up">
+                    Sempre em busca de conhecimento e novas experiências, estou sempre aberto a novos desafios e oportunidades.
+                  </p>
+                  <p class="about-descr__text animate-in-up">
+                    <span class="fw-bold text-link-bold"> Believe in yourself.</span>
+                  </p>
+                  <!-- <div class="btn-group about-descr__btnholder animate-in-up">
+                            <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="#0">
+                              <span class="btn-caption">Download CV</span>
+                              <i class="ph-bold ph-download-simple"></i>
+                            </a>
+                          </div> -->
+                </div>
+                <!-- About Me Description End -->
+                <!-- About Me Information Start -->
+                <div class="col-12 col-xl-4 about-info grid-item">
+                  <img class="shadow-box link-xl-memoji felipe-img" src="/img/felipe.png" alt="">
+                  <!-- <div class="about-info__item animate-in-up">
+                            <h6>
+                              <small class="top">Nome</small>
+                              Felipe Alves
+                            </h6>
+                          </div>
+                          <div class="about-info__item animate-in-up">
+                            <h6>
+                              <small class="top">Telefone</small>
+                              <a class="text-link-bold" href="tel:+12127089400">+1 212-708-9400</a>
+                            </h6>
+                          </div>
+                          <div class="about-info__item animate-in-up">
+                            <h6>
+                              <small class="top">Email</small>
+                              <a class="text-link-bold" href="mailto:example@example.com?subject=Message%20from%20your%20site">hello@yourdomain.com</a>
+                            </h6>
+                          </div>
+                          <div class="about-info__item animate-in-up">
+                            <h6>
+                              <small class="top">Location</small>
+                              <a class="text-link-bold" href="https://maps.app.goo.gl/xMJXTEUeHkv6kYRQ6" target="_blank">Odesa, Ukraine</a>
+                            </h6>
+                          </div> -->
+                </div>
+                <!-- About Me Information End -->
+
               </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+          </div>
+          <!-- <div class="posi">
+                      <div id="blocks"></div>
+                    </div> -->
+          <!-- <div class="content-teste">
+                      <div class="content__block grid-block block-large"> -->
+          <!-- Tools List Start -->
+
+          <!-- <div class="tools-cards d-flex justify-content-start flex-wrap"> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-photoshop.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">Photoshop</h6>
+                            </div>
+                          </div> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-figma.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">Figma</h6>
+                            </div>
+                          </div> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-illustrator.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">Illustrator</h6>
+                            </div>
+                          </div> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-sketch.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">Sketch</h6>
+                            </div>
+                          </div> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-blender.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">Blender</h6>
+                            </div>
+                          </div> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-html.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">HTML5</h6>
+                            </div>
+                          </div> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-css.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">CSS3</h6>
+                            </div>
+                          </div> -->
+          <!-- tools simgle item -->
+          <!-- <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="img/icons/icon-notion.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption animate-in-up">Notion</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+        </section>
+
+        <!-- Content Block - About Me Data End -->
+
+        <!-- Content Block - Services Start -->
+        <!-- <div class="content__block grid-block">
+                    <div class="container-fluid p-0">
+                      <div class="row g-0 align-items-stretch cards"> -->
+        <!-- services cards grid single item -->
+        <!-- <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                          <div class="cards__card d-flex flex-column">
+                            <div class="cards__descr">
+                              <h4 class="cards__title animate-in-up">Frontend<br>development</h4>
+                              <div class="cards__tags d-flex flex-wrap animate-in-up">
+                                <span class="rounded-tag tag-outline">UI/UX Design</span>
+                                <span class="rounded-tag tag-outline">Design to Code</span>
+                              </div>
+                              <p class="small cards__text animate-in-up">I work with HTML/CSS, Framer and WordPress.</p>
+                            </div>
+                            <div class="cards__image d-flex animate-in-up">
+                              <img src="https://dummyimage.com/1200x900/4d4d4d/636363" alt="Service/Feature Image">
+                            </div>
+                          </div>
+                        </div> -->
+        <!-- services grid cards single item -->
+        <!-- <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                          <div class="cards__card d-flex flex-column">
+                            <div class="cards__descr">
+                              <h4 class="cards__title animate-in-up">Digital art and graphic design</h4>
+                              <div class="cards__tags d-flex flex-wrap animate-in-up">
+                                <span class="rounded-tag tag-outline">Illustrations</span>
+                                <span class="rounded-tag tag-outline">AI Experiments</span>
+                              </div>
+                              <p class="small cards__text animate-in-up">I use Adobe Photoshop, Fresco and Blender to create 
+                                illustrations and 3D renders for my clients and stocks.
+                              </p>
+                            </div>
+                            <div class="cards__image d-flex animate-in-up">
+                              <img src="https://dummyimage.com/1200x900/4d4d4d/636363" alt="Service/Feature Image">
+                            </div>
+                          </div>
+                        </div> -->
+        <!-- services grid cards single item -->
+        <!-- <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                          <div class="cards__card d-flex flex-column">
+                            <div class="cards__descr">
+                              <h4 class="cards__title animate-in-up">SEO/Digital marketing solutions</h4>
+                              <div class="cards__tags d-flex flex-wrap animate-in-up">
+                                <span class="rounded-tag tag-outline">Social Media</span>
+                                <span class="rounded-tag tag-outline">Analytics</span>
+                              </div>
+                              <p class="small cards__text animate-in-up">Social media content plans, media monitoring, email and text messaging
+                                and search engine optimization.
+                              </p>
+                            </div>
+                            <div class="cards__image d-flex">
+                              <img src="https://dummyimage.com/1200x900/4d4d4d/636363" alt="Service/Feature Image">
+                            </div>
+                          </div>
+                        </div> -->
+        <!-- services grid cards single item -->
+        <!-- <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                          <div class="cards__card d-flex flex-column">
+                            <div class="cards__descr">
+                              <h4 class="cards__title animate-in-up">Brand<br>identity</h4>
+                              <div class="cards__tags d-flex flex-wrap animate-in-up">
+                                <span class="rounded-tag tag-outline">Logo Design</span>
+                                <span class="rounded-tag tag-outline">Style Guides</span>
+                              </div>
+                              <p class="small cards__text animate-in-up">I help my clients to develop a personality and brand voice, 
+                                design the brand look and logo.
+                              </p>
+                            </div>
+                            <div class="cards__image d-flex animate-in-up">
+                              <img src="https://dummyimage.com/1200x900/4d4d4d/636363" alt="Service/Feature Image">
+                            </div>
+                          </div>
+                        </div>
+            
+                      </div>
+                    </div>
+                  </div> -->
+        <!-- Content Block - Services End -->
+        <!-- About Section End -->
+        <!-- Resume Section Start -->
+        <section id="resume" class="inner resume">
+
+          <!-- Content Block - H2 Section Title Start -->
+          <div class="content__block block-large">
+            <p class="h2__subtitle animate-in-up shadow-box">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+                fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+              </svg>
+              <span>Resume</span>
+            </p>
+            <h2 class="h2__title animate-in-up">Educação e Experiência</h2>
+            <p class="h2__text animate-in-up">
+              Formado em <span class="text-link">Análise e Desenvolvimento de Sistemas</span> pela FMU em 2021  concluí o curso de Full Stack Developer Web na Digital House Brasil em Fevereiro de 2022.
+               Com 2 anos de experiência, atualmente, prestador de serviços na Yabá Consultoria.
+            </p>
+          </div>
+          <!-- Content Block - H2 Section Title End -->
+
+          <!-- Content Block - Education Start -->
+          <div class="content__block block-large">
+
+            <!-- H3 Block Start -->
+            <div class="section-h3">
+              <h3 class="h3__title animate-in-up">Educação</h3>
+            </div>
+            <!-- H3 Block End -->
+
+            <!-- Education Lines Start -->
+            <div class="container-fluid p-0 resume-lines">
+              <!-- education single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2021 - 2022</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Full Stack Developer</h5>
+                  <p class="resume-lines__source animate-in-up">Cursado em
+                    <a href="https://www.digitalhouse.com/br" class="text-link-bold" target="_blank">Digital House</a>
+                  </p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">Atividades e grupos:<br> 
+                    - Front End (HTML, CSS, JS,React e EJS) <br>
+                    - Back End (Node, Express, Javascript) <br>
+                    - Banco de Dados (MySQL, SQL) <br>
+                    - Versionamento (GIT e GitHub) <br>
+                </div>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+              <!-- education single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2019 - 2021</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Análise e Desenvolvimento de Sistemas</h5>
+                  <p class="resume-lines__source animate-in-up">Cursado em
+                    <a href="https:/portal.fmu.br/" class="text-link-bold" target="_blank">FMU - Centro
+                      Universitário</a>
+                  </p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">Curso superior técnico com o objetivo de formar profissionais
+                   preparados para desempenhar funções analíticas e práticas relacionadas a sistemas computacionais de informação.</p>
+                </div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </div>
+            <!-- Education Lines End -->
+
+          </div>
+          <!-- Content Block - Education End -->
+
+          <!-- Content Block - Experience Start -->
+          <div class="content__block block-large">
+
+            <!-- H3 Block Start -->
+            <div class="section-h3">
+              <h3 class="h3__title animate-in-up">Experiência Profissional</h3>
+            </div>
+            <!-- H3 Block End -->
+
+            <!-- Experience Lines Start -->
+            <div class="container-fluid p-0 resume-lines">
+              <!-- experience single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2022 - Atual</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Full Stack Developer Jr</h5>
+                  <p class="resume-lines__source animate-in-up">na
+                    <span class="fw-bold text-link-bold">Yabá Consultoria</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">Responsável pelo desenvolvimento de aplicações Full Stack para a empresa e para clientes em busca de soluções.(Java/Angular)<br>
+                    <!-- • Desenvolvimento de aplicações web utilizando Angular, Typescript, NodeJs/Java, trazendo soluções para a empresa e aos demais clientes. <br>
+                    • Utilização de banco de dados SQL para administração dos dados. <br>
+                    • Utilização da AWS, como Secrets, S3 e Lambda para o desenvolvimento de algumas aplicações. <br>
+                    • Prototipação de novos layouts junto com a equipe de comunicação.</p> -->
+                </div>
+              </div>
+              <!-- experience single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2019 - 2022</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Suporte</h5>
+                  <p class="resume-lines__source animate-in-up">no
+                    <span class="fw-bold text-link-bold">Colégio Henri Wallon</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">Auxiliar técnico de informática, auxiliando professores e alunos com as máquinas e aplicativos propostas pela escola,
+                     atuando Google admin e Google cloud.</p>
+                </div>
+              </div>
+              <!-- experience single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2017 - 2018</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Auxiliar Administrativo</h5>
+                  <p class="resume-lines__source animate-in-up">no
+                    <span class="fw-bold text-link-bold">Newbee Comercial</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">Recepcionar visitantes; realizar contato com clientes de modo ativo e receptivo; 
+                    realizar negociações; formalizar propostas de fornecedores; auxiliar no controle de estoque.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Experience Lines End -->
+
+          </div>
+          <!-- Content Block - Experience End -->
+
+          <!-- Content Block - H3 Block Start -->
+          <div class="content__block">
+            <div class="section-h3 section-h3-grid">
+              <h3 class="h3__title animate-in-up">Tecnologias</h3>
+            </div>
+          </div>
+          <!-- Content Block - H3 Block End -->
+
+          <!-- Content Block - Tools List Start -->
+          <div class="d-flex gap-5 flex-column flex-lg-row content__block mb-5 pb-lg-5 pb-xxl-0" >
+            <div class="mt-0 mt-lg-5 ">
+              <!-- <img src="img/2c586a76-ff37-4737-810a-ed9e3b4873c7.webp" alt="" style="width: 200px; height: 200px;" class="shadow-box moldura"> -->
+              <video src="img/real.webm" autoplay loop width="220" height="220" class="moldura" muted>
+                <!-- <source src="img/memoji.mp4" type="video/mp4"> -->
+                Seu navegador não suporta vídeo HTML5.
+
+              </video>
+            </div>
+            
+            <!-- <div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                <div class="tools-cards__border shadow-box"></div>
+                <div class="tools-cards__card shadow-box">
+                  <img class="tools-cards__icon" src="img/icons/icon-html.svg" alt="Tools Icon">
+                </div>
+                <h6 class="tools-cards__caption">HTML5</h6>
+              </div> -->
+              <div class="d-xl-none">
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="mb-xl-4">
+                        <div class="card">
+                              <div class="tools-cards__card shadow-box moldura">
+                                <img class="tools-cards__icon" src="img/icons/icon-html.svg" alt="Tools Icon">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="mb-xl-4">
+                      <div class="card">
+                        <div class="tools-cards__card shadow-box moldura">
+                          <img class="tools-cards__icon" src="img/icons/icon-css.svg" alt="Tools Icon">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/sass (1).png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/javascript (1).png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/bootstrap (1).png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/icon-tailwind.svg" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/angular.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/typescript.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/git.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/mysql (1).png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/node-js.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/aws.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/docker.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/sql.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/java.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/github.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/icon-figma.png" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="card">
+                      <div class="tools-cards__card shadow-box moldura">
+                        <img class="tools-cards__icon" src="img/icons/logo-vercel.svg" alt="Tools Icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              <div class="content__block grid-block block-large content__card">
+                <!-- Tools List Start -->
+                <div class="tools-cards d-flex justify-content-start">
+
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/icon-html.svg" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">HTML5</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/icon-css.svg" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">CSS3</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/sass (1).png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Sass</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/javascript (1).png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Javascript</h6>
+                  </div>
+
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/bootstrap (1).png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Bootstrap</h6>
+                  </div>
+
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/icon-tailwind.svg" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Tailwind</h6>
+                  </div>
+
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/angular.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Angular</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/typescript.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Typescript</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/git.png" alt="Tools Icon">
+
+                    </div>
+                    <h6 class="tools-cards__caption">Git</h6>
+                  </div>
+                  <!-- tools simgle item -->
+
+                </div>
+                <div class="tools-cards d-flex justify-content-start">
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/mysql (1).png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">MySQL</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/node-js.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Node.js</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/aws.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">AWS</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/docker.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Docker</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/sql.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">SQL</h6>
+                  </div>
+                  <!-- tools simgle item -->
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/java.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Java</h6>
+                  </div>
+                  <!-- tools simgle item -->
+
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/github.png" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">GitHub</h6>
+                  </div>
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/icon-figma.svg" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Figma</h6>
+                  </div>
+                  <div class="tools-cards__item d-flex grid-item-s animate-card-5 flex-column text-center">
+                    <div class="tools-cards__border shadow-box"></div>
+                    <div class="tools-cards__card shadow-box">
+                      <img class="tools-cards__icon" src="img/icons/logo-vercel.svg" alt="Tools Icon">
+                    </div>
+                    <h6 class="tools-cards__caption">Vercel</h6>
+                  </div>
+                </div>
+                <!-- Tools List End -->
+              </div>
+            </div>
+          </div>
+          <!-- Content Block - Tools List End -->
+
+          <!-- Content Block - H2 Block Start -->
+        </section>
+      </div>
+      <!-- Portfolio Section Start -->
+      <section id="portfolio" class="inner inner-first portfolio">
+
+        <!-- Content Block - H2 Section Title Start -->
+        <div class="content__block section-grid-title">
+          <p class="h2__subtitle animate-in-up shadow-box">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+              fill="currentColor">
+              <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+            </svg>
+            <span>Portfolio</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Confira meus projetos em destaque</h2>
+        </div>
+        <!-- Content Block - H2 Section Title End -->
+
+        <!-- Content Block - Works Gallery Start -->
+        <div class="content__block grid-block">
+          <div class="container-fluid px-0 inner__gallery">
+            <div class="row gx-0 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2 link-eye" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="/img/imobmockup.png" data-image="img/imobmockup.png"
+                  class="gallery__link " itemprop="contentUrl" data-size="1400x1400">
+                  <img src="img/imobmockup.png" class="gallery__image" itemprop="thumbnail"
+                    alt="Image description">
+                </a>
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <!-- <h5>Imobiliária - Sistema de Gestão</h5> -->
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">Imobiliária - Sistema de Gestão</span>
+                    <!-- <span class="rounded-tag opposite">3D Render</span> -->
+                  </div>
+                  <div class="d-flex gap-3">
+                    <img class="tools-cards__icon__project" src="img/icons/java.png" alt="Tools Icon">
+                    <img class="tools-cards__icon__project" src="img/icons/angular.png" alt="Tools Icon">
+                  </div>
+                  <p class="small"> Projeto Desenvolvido para a Imobiliárias, com o objetivo de gerenciar os imóveis, proprietários,
+                    locatários, contratos e pagamentos de boletos com integração da API do Itaú. <br>
+                    Projeto desenvolvido com outros desenvolvedores.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2 link-eye" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/metromockup.png" data-image="img/metromockup.png"
+                  class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
+                  <img src="img/metromockup.png" class="gallery__image" itemprop="thumbnail"
+                    alt="Image description">
+                </a>
+                <figcaption class="gallery__descr opposite" itemprop="caption description">
+                  <!-- <h5 class="opposite">Dashboard Template</h5> -->
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">Metrô SP</span>
+                    <!-- <span class="rounded-tag">Figma</span> -->
+                  </div>
+                  <div class="d-flex gap-3">
+                    <img class="tools-cards__icon__project" src="img/icons/angular.png" alt="Tools Icon">
+                    <img class="tools-cards__icon__project" src="img/icons/bootstrap (1).png" alt="Tools Icon">
+                  </div>
+                  <p class="small">Landing Page desenvolvida utilizando a API do Metrô SP, com o objetivo de apresentar os Status das Estações de Metrô de SP em tempo real.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2 link-eye" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/linktreemockup.png" data-image="img/linktreemockup.png" class="gallery__link"
+                  itemprop="contentUrl" data-size="1400x1400">
+                  <img src="img/linktreemockup.png" class="gallery__image" itemprop="thumbnail"
+                    alt="Image description">
+                </a>
+                <figcaption class="gallery__descr opposite" itemprop="caption description">
+                  <!-- <h5 class="opposite">Linktree - Cópia</h5> -->
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">Linktree - Cópia</span>
+                    <!-- <span class="rounded-tag">3D Render</span> -->
+                  </div>
+                  <div class="d-flex gap-3">
+                    <img class="tools-cards__icon__project" src="img/icons/icon-html.svg" alt="Tools Icon">
+                    <img class="tools-cards__icon__project" src="img/icons/icon-css.svg" alt="Tools Icon">
+                    <img class="tools-cards__icon__project" src="img/icons/node-js.png" alt="Tools Icon">
+                    <!-- <img class="tools-cards__icon__project" src="img/icons/bootstrap (1).png" alt="Tools Icon"> -->
+                  </div>
+                  <p class="small">Projeto Integrador do Curso da Digital House, onde clonamos a página do Linktree e suas funcionalidades.
+
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2 link-eye" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/kcmockup.png" data-image="img/kcmockup.png"
+                  class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
+                  <img src="img/kcmockup.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                </a>
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <!-- <h5>Smart Penguin</h5>  -->
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">KCExecutiva - Landing Page</span>
+                    <!-- <span class="rounded-tag opposite">AI Experiment</span> -->
+                     
+                  </div>
+                  <div class="d-flex gap-3">
+                    <img class="tools-cards__icon__project" src="img/icons/angular.png" alt="Tools Icon">
+                    <img class="tools-cards__icon__project" src="img/icons/bootstrap (1).png" alt="Tools Icon">
+                  </div>
+                  <p class="small">Landing Page desenvolvida para a empresa KC Executiva, com o objetivo de apresentar os serviços da empresa e captar leads.
+
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Content Block - Works Gallery End -->
+
+      </section>
+      <!-- Portfolio Section End -->
+      <section class="inner testimonials">
+        <div class="content__block section-title">
+          <p class="h2__subtitle animate-in-up shadow-box">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+              fill="currentColor">
+              <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+            </svg>
+            <span>Depoimentos</span>
+          </p>
+          <h2 class="h2__title animate-in-up">O que dizem sobre mim</h2>
+        </div>
+        <!-- Content Block - H2 Block End -->
+
+        <!-- Content Block - Testimonials Slider Start -->
+        <div class="content__block">
+
+          <!-- Testimonials Slider Start -->
+          <div class="testimonials-slider">
+            <!-- slider main container -->
+            <div class="swiper-testimonials">
+              <!-- additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- slides -->
+                <div class="swiper-slide">
+                  <div class="testimonials-card animate-in-up shadow-box">
+                    <div class="testimonials-card__tauthor d-flex animate-in-up">
+                      <div class="tauthor__avatar">
+                        <img src="/img/Katelline-Curvelo.png" alt="Review Author">
+                      </div>
+                      <div class="tauthor__info d-flex flex-column justify-content-center">
+                        <p class="tauthor__name">Katelline Curvelo</p>
+                        <p class="tauthor__position">Gestão de Projetos | PMO | Redesenho de Processos | Gerente Organizacional | Gestão de Negócios | Assessoria Executiva - 
+                          <span class="text-link-bold" target="_blank">Top Voice LinkedIn </span>
+                        </p>
+                        <!-- <div class="tauthor__rating d-flex">
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="testimonials-card__descr animate-in-up">
+                      <p>A minha expectativa era uma LP, mas o que recebi foi mais do que um site completo, foi melhor do que eu imaginava! Felipe se esforça para entender
+                         exatamente o desejo do cliente, busca referências e continua surpreendendo depois da entrega, pois segue acompanhando as métricas do site para garantir
+                          o melhor desempenho na web.</p>
+                    </div>
+                    <div class="testimonials-card__btnholder animate-in-up">
+                        <a class="btn mobile-vertical btn-line btn-transparent slide-right" href="https://www.kcaexecutiva.com/" target="_blank">
+                          <span class="btn-caption">Página do Projeto</span>
+                          <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+                <!-- <div class="swiper-slide">
+                  <div class="testimonials-card  animate-in-up shadow-box">
+                    <div class="testimonials-card__tauthor d-flex  animate-in-up">
+                      <div class="tauthor__avatar">
+                        <img src="https://dummyimage.com/400x400/4d4d4d/636363" alt="Review Author">
+                      </div>
+                      <div class="tauthor__info d-flex flex-column justify-content-center">
+                        <p class="tauthor__name">Jenny Pineapple</p>
+                        <p class="tauthor__position">SEO in
+                          <a href="#0" class="text-link-bold" target="_blank">Creative People</a>
+                        </p>
+                        <div class="tauthor__rating d-flex">
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                          <i class="ph-fill ph-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonials-card__descr animate-in-up">
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud. Dolore
+                        magna aliquam.</p>
+                    </div>
+                    <div class="testimonials-card__btnholder animate-in-up">
+                        <a class="btn mobile-vertical btn-line btn-transparent slide-right" href="#0">
+                          <span class="btn-caption">Project Page</span>
+                          <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                      </div>
+                  </div>
+                </div> -->
+              </div>
+              <!-- navigation buttons -->
+              <div class="swiper-button-prev mxd-slider-btn-square mxd-slider-btn-square-prev animate-in-up">
+                <a class="btn btn-square btn-square-s btn-outline slide-left shadow-box" href="#0">
+                  <i class="ph-bold ph-caret-left"></i>
+                </a>
+              </div>
+              <div class="swiper-button-next mxd-slider-btn-square mxd-slider-btn-square-next animate-in-up">
+                <a class="btn btn-square btn-square-s btn-outline slide-right shadow-box" href="#0">
+                  <i class="ph-bold ph-caret-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonials Slider End -->
+
+        </div>
+      </section>
+
+      <!-- Content Block - Testimonials Slider End -->
+
+      <!-- Resume Section End -->
+
+      <!-- Contact Section Start -->
+      <div class="footer-background-border">
+
+        <section id="contact" class="inner contact footer-background">
+
+          <!-- Content Block - H2 Section Title Start -->
+          <div class="content__block section-title d-lg-flex gap-5">
+            <img class="moldura shadow-box d-none d-lg-block" src="/img/8b163c48-b384-43d5-a8ba-23afe3e1ce0e.webp" alt=""
+              style="width: 100px; height: 100px;">
+
+            <div class="">
+              <p class="h2__subtitle  animate-in-up shadow-box">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+                  fill="currentColor">
+                  <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                    C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                    C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+                </svg>
+                <span>Contato</span>
+              </p>
+              <img class="moldura shadow-box d-lg-none" src="/img/8b163c48-b384-43d5-a8ba-23afe3e1ce0e.webp" alt=""
+              style="width: 100px; height: 100px;">
+              <h2 class="h2__title  animate-in-up">Vamos dar vida às suas ideias com soluções digitais criativas!</h2>
+            </div>
+          </div>
+          <!-- Content Block - H2 Section Title End -->
+
+          <!-- Content Block - Contact Form Start -->
+          <div class="content__block grid-block block-grid-large">
+            <div class="form-container">
+
+              <!-- Reply Messages Start -->
+              <div class="form__reply centered text-center">
+                <i class="ph-bold ph-smiley reply__icon"></i>
+                <p class="reply__title">Done!</p>
+                <span class="reply__text">Thanks for your message. I'll get back as soon as possible.</span>
+              </div>
+              <!-- Reply Messages End -->
+
+              <!-- Contact Form Start -->
+              <form class="form contact-form" id="contact-form">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Starter Template">
+                <input type="hidden" name="admin_email" value="support@mixdesign.club">
+                <input type="hidden" name="form_subject" value="Contact Form Message">
+                <!-- END Hidden Required Fields-->
+                <div class="container-fluid p-0">
+                  <div class="row gx-0">
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="text" name="Name" placeholder="Seu Nome*" required>
+                    </div>
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="text" name="Company" placeholder="Nome da Empresa">
+                    </div>
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="email" name="E-mail" placeholder="Email*" required>
+                    </div>
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="tel" name="Phone" placeholder="Telefone*" required>
+                    </div>
+                    <div class="col-12 form__item animate-in-up">
+                      <textarea name="Message" placeholder="Mensagem* " required></textarea>
+                    </div>
+                    <div class="col-12 form__item animate-in-up">
+                      <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
+                        <span class="btn-caption">Enviar mensagem</span>
+                        <i class="ph-bold ph-paper-plane-tilt"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!-- Contact Form End -->
+
+            </div>
+          </div>
+          <!-- Content Block - Contact Form End -->
+
+          <!-- Content Block - Socials Cards Start -->
+          <!-- <div class="content__block grid-block">
+            <div class="socials-cards d-flex justify-content-start flex-wrap"> -->
+          <!-- socials item -->
+          <!-- <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+                <div class="socials-cards__card">
+                  <i class="ph-bold ph-dribbble-logo"></i>
+                  <a class="socials-cards__link" href="https://dribbble.com/" target="_blank"></a>
+                </div>
+              </div> -->
+          <!-- socials item -->
+          <!-- <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+                <div class="socials-cards__card">
+                  <i class="ph-bold ph-behance-logo"></i>
+                  <a class="socials-cards__link" href="https://www.behance.net/" target="_blank"></a>
+                </div>
+              </div> -->
+          <!-- socials item -->
+          <!-- <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+                <div class="socials-cards__card">
+                  <i class="ph-bold ph-instagram-logo"></i>
+                  <a class="socials-cards__link" href="https://www.instagram.com/" target="_blank"></a>
+                </div>
+              </div> -->
+          <!-- socials item -->
+          <!-- <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+                <div class="socials-cards__card">
+                  <i class="ph-bold ph-twitch-logo"></i>
+                  <a class="socials-cards__link" href="https://www.twitch.tv/" target="_blank"></a>
+                </div>
+              </div> -->
+          <!-- socials item -->
+          <!-- <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+                <div class="socials-cards__card">
+                  <i class="ph-bold ph-pinterest-logo"></i>
+                  <a class="socials-cards__link" href="https://www.pinterest.com/" target="_blank"></a>
+                </div>
+              </div>
+            </div>
           </div> -->
+          <!-- Content Block - Socials Cards End -->
 
-        </div>
+          <!-- Content Block - Teaser Start -->
+          <div class="content__block">
+            <div class="teaser">
+              <p class="teaser__text animate-in-up">Curioso sobre meu trabalho ou tem um projeto em mente?
+               <br>
+                <a class="text-link-bold"
+                  href="mailto:contato@felipealves.dev?subject=Felipe%20Alves%20...&body=Olá%20Felipe,%20eu%20gostaria%20de%20falar%20sobre...">Deixe sua mensagem e eu responderei em breve!</a>
+                e retornarei o mais breve possível.
+              </p>
+            </div>
+          </div>
+          <!-- Content Block - Teaser End -->
 
-      </div>
-    </section><!-- End Contact Section -->
+          <!-- Content Block - Contact Data Start -->
+          <div class="content__block">
+            <div class="container-fluid p-0 contact-lines animate-in-up">
+              <div class="row g-0 contact-lines__item">
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data d-flex flex-column gap-5">
+                  <div>
+                    <p class="contact-lines__title animate-in-up">Localidade</p>
+                    <p class="contact-lines__text animate-in-up">
+                      <a class="text-link-bold" href="#">São
+                        Paulo, Brasil</a>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="contact-lines__title animate-in-up">Celular</p>
+                    <p class="contact-lines__text animate-in-up">
+                      <a class="text-link-bold" href="tel:+5511986756857">+55 11 98675-6857</a>
+                    </p>
+                  </div>
 
-  </main><!-- End #main -->
+                </div>
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data d-flex flex-column gap-5">
+                  <div>
+                    <p class="contact-lines__title animate-in-up">LinkedIn</p>
+                    <p class="contact-lines__text animate-in-up">
+                      <a class="text-link-bold" href="https://www.linkedin.com/in/felipe-santana-alves/" target="_blank">in/felipe-santana-alves</a>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="contact-lines__title animate-in-up">GitHub</p>
+                    <p class="contact-lines__text animate-in-up">
+                      <a class="text-link-bold" href="https://github.com/FelipeSantanaa" target="_blank">FelipeSantanaa</a>
+                    </p>
+                  </div>
+                </div>
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data">
+                  <p class="contact-lines__title animate-in-up">Email</p>
+                  <p class="contact-lines__text animate-in-up">
+                    <a class="text-link-bold"
+                    href="mailto:contato@felipealves.dev?subject=Felipe%20Alves%20...&body=Olá%20Felipe,%20eu%20gostaria%20de%20falar%20sobre...">contato@felipealves.dev
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom Decoration Start -->
+          <!-- Bottom Decoration End -->
+          <!-- Content Block - Contact Data End -->
+          <div class="d-flex justify-content-center align-items-center d-none">
+            <video src="img/teste-header.webm" autoplay loop muted width="420" height="420">
+              <!-- <source src="img/memoji.mp4" type="video/mp4"> -->
+              Seu navegador não suporta vídeo HTML5.
+    
+            </video>
+            <div>
+              <p>Criado por <br>Felipe e Jonathas</p>
+            </div>
+            <video src="img/teste-header.webm" autoplay loop muted width="420" height="420">
+              <!-- <source src="img/memoji.mp4" type="video/mp4"> -->
+              Seu navegador não suporta vídeo HTML5.
+    
+            </video>
+           </div>
+        </section>
+        <!-- Contact Section End -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright color-gray">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits color-gray">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a class="color-gray" href="https://bootstrapmade.com/">BootstrapMade</a>
+
       </div>
     </div>
-  </footer><!-- End  Footer -->
+    <div class="decor decor-footer">
+      <!-- Marquee Start -->
+      <a class="marquee marquee-relative link-l-arrow" href="https://www.jonathasjean.com" target="_blank">
+        <div class="marquee-content scroll">
+          <span>Desenvolvido</span>
+          <span>por Felipe</span>
+          <span>Desenvolvido</span>
+          <span>por Jonathas</span>
+        </div>
+        <div class="marquee-content scroll">
+          <span>Desenvolvido</span>
+          <span>por Felipe</span>
+          <span>Desenvolvido</span>
+          <span>por Jonathas</span>
+        </div>
+        <div class="marquee-content scroll">
+          <span>Desenvolvido</span>
+          <span>por Felipe</span>
+          <span>Desenvolvido</span>
+          <span>por Jonathas</span>
+        </div>
+      </a>
+      <!-- Marquee End -->
+    </div>
+    <!-- Page Content End -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
 
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+          <div class="pswp__top-bar">
+
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
+
+
+            <!-- <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
+
+            <a class="pswp__button pswp__button--share link-s" title="Share"></a> -->
+
+            <a class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></a>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader-active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+
+          <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
+
+          <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
+
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+
+  <!-- Load Scripts Start -->
+  <script src="js/libs.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const content = document.querySelector('body');
+    const imgLoad = imagesLoaded(content);
+    const svgBackground = document.querySelector("svg-background");
+
+    imgLoad.on('done', instance => {
+
+      document.getElementById("loaderContent").classList.add("fade-out");
+      setTimeout(() => {
+        document.getElementById("loader").classList.add("loaded");
+      }, 3000);
+
+      gsap.set(".animate-headline", { y: 50, opacity: 0 });
+      ScrollTrigger.batch(".animate-headline", {
+        interval: 0.1,
+        batchMax: 4,
+        duration: 6,
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          ease: 'sine',
+          stagger: { each: 0.15, grid: [1, 4] },
+          overwrite: true
+        }),
+        onLeave: batch => gsap.set(batch, { opacity: 1, y: 0, overwrite: true }),
+        onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+        onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 50, overwrite: true })
+      });
+
+    });
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/gallery-init.js"></script>
+  <!-- Load Scripts End -->
+  <!-- <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const blockContainer = document.getElementById("blocks");
+            const blockSize = 10;
+            const maxRows = 4;
+            const totalBlocks = 700;
+            const numCols = Math.ceil(totalBlocks / maxRows);
+
+            function createBlocks() {
+                for (let i = 0; i < totalBlocks; i++) {
+                    const block = document.createElement("div");
+                    block.classList.add("block");
+                    block.dataset.index = i;
+                    block.addEventListener("mousemove", highlightRandomNeighbors);
+                    blockContainer.appendChild(block);
+                }
+                blockContainer.style.height = `${blockSize * maxRows}px`;
+            }
+
+            function highlightRandomNeighbors() {
+                const index = parseInt(this.dataset.index);
+                const neighbors = [
+                    index - 1,
+                    index + 1,
+                    index - numCols,
+                    index + numCols,
+                    index - numCols - 1,
+                    index - numCols + 1,
+                    index + numCols - 1,
+                    index + numCols + 1
+                ].filter(
+                    (i) =>
+                        i >= 0 &&
+                        i < totalBlocks &&
+                        Math.abs((i % numCols) - (index % numCols)) <= 1
+                );
+
+                this.classList.add("highlight");
+                setTimeout(() => {
+                    this.classList.remove("highlight");
+                }, 500);
+
+                shuffleArray(neighbors).slice(0, 1).forEach((nIndex) => {
+                    const neighbor = blockContainer.children[nIndex];
+
+                    if (neighbor) {
+                        neighbor.classList.add("highlight");
+                        setTimeout(() => {
+                            neighbor.classList.remove("highlight");
+                        }, 500);
+                    }
+                });
+            }
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            createBlocks();
+        });
+
+
+    </script> -->
+  <script src="/js/animejs/anime.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      anime({
+        targets: '.elemento-teste',
+        translateX: 250,
+        rotate: '1turn',
+        duration: 800
+      });
+    });
+  </script>
+  <script>
+    // --------------------------------------------- //
+    // Cursor Start
+    // --------------------------------------------- //
+    function followCursor() {
+      var cursor = $('.cursor');
+      // follow effect
+      function moveCursor(e) {
+        var t = e.clientX + "px",
+          n = e.clientY + "px";
+        var circleCursor = anime({
+          targets: '.cursor',
+          duration: 30,
+          left: t,
+          top: n,
+          easing: 'linear'
+        });
+      }
+      $(window).on('mousemove', moveCursor);
+      // line link hover
+      $('.link-s').on('mouseenter', function () {
+        cursor.addClass('cursor-s');
+      });
+      $('.link-s').on('mouseleave', function () {
+        cursor.removeClass('cursor-s');
+      });
+      // buttons & triggers hover
+      $('.link-m').on('mouseenter', function () {
+        cursor.addClass('cursor-m');
+      });
+      $('.link-m').on('mouseleave', function () {
+        cursor.removeClass('cursor-m');
+      });
+      // buttons & triggers opposite hover
+      $('.link-m-opposite').on('mouseenter', function () {
+        cursor.addClass('cursor-m-opposite');
+      });
+      $('.link-m-opposite').on('mouseleave', function () {
+        cursor.removeClass('cursor-m-opposite');
+      });
+      // controls hover
+      $('.link-eye').on('mouseenter', function () {
+        cursor.addClass('cursor-eye');
+      });
+      $('.link-eye').on('mouseleave', function () {
+        cursor.removeClass('cursor-eye');
+      });
+      // controls oppisite hover
+      $('.link-l-opposite').on('mouseenter', function () {
+        cursor.addClass('cursor-l-opposite');
+      });
+      $('.link-l-opposite').on('mouseleave', function () {
+        cursor.removeClass('cursor-l-opposite');
+      });
+      // controls arrow hover
+      $('.link-l-arrow').on('mouseenter', function () {
+        cursor.addClass('cursor-l-arrow');
+      });
+      $('.link-l-arrow').on('mouseleave', function () {
+        cursor.removeClass('cursor-l-arrow');
+      });
+      // XL controls hover
+      $('.link-xl').on('mouseenter', function () {
+        cursor.addClass('cursor-xl');
+      });
+      $('.link-xl').on('mouseleave', function () {
+        cursor.removeClass('cursor-xl');
+      });
+      // XL opposite controls hover
+      $('.link-xl-opposite').on('mouseenter', function () {
+        cursor.addClass('cursor-xl-opposite');
+      });
+      $('.link-xl-opposite').on('mouseleave', function () {
+        cursor.removeClass('cursor-xl-opposite');
+      });
+      $('.link-xl-opposite').on('mouseleave', function () {
+        cursor.removeClass('cursor-xl-opposite');
+      });
+      $('.link-xl-memoji').on('mouseenter', function () {
+        cursor.addClass('cursor-xl-memoji');
+      });
+      $('.link-xl-memoji').on('mouseleave', function () {
+        console.log('Memoji mouseleave');
+        cursor.removeClass('cursor-xl-memoji');
+      });
+    };
+
+    // init
+    followCursor();
+    // --------------------------------------------- //
+    // Cursor End
+    // --------------------------------------------- //
+  </script>
+
+<script>
+  window.addEventListener('scroll', function() {
+      var header = document.querySelector('.header');
+      if (window.scrollY > 0) {
+          header.classList.add('scroll-effect');
+      } else {
+          header.classList.remove('scroll-effect');
+      }
+  });
+</script>
 </body>
 
 </html>
