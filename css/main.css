@@ -933,12 +933,13 @@ h2 {
   h2 {
     /* font-size: 5.4rem;
     max-width: 80rem; */
-    text-underline-offset: 16px;
+
   }
 }
 
 @media only screen and (min-width: 1600px) {
   h2 {
+    text-underline-offset: 16px;
     font-size: 3rem;
     max-width: 100%;
   }
@@ -1416,6 +1417,10 @@ p.additional-text a {
 
 }
 
+.btn-principal {
+  padding: 0 !important;
+}
+
 @media only screen and (min-width: 1600px) {
   .btn-default {
     height: 6rem;
@@ -1424,9 +1429,6 @@ p.additional-text a {
     font-size: 2rem;
   }
 
-  .btn-principal {
-    padding: 0 !important;
-  }
   .btn-default i {
     font-size: 2.2rem;
   }
@@ -2894,6 +2896,20 @@ form textarea:required:valid {
   .header-memoji {
     position: absolute;
     bottom: 0;
+    left: 50rem;
+    /* width: 100%; */
+    padding: 0 3rem;
+    overflow-x: hidden;
+    display: block;
+    height: 760px;
+    width: 1340px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .header-memoji {
+    position: absolute;
+    bottom: 0;
     left: 70rem;
     /* width: 100%; */
     padding: 0 3rem;
@@ -2912,6 +2928,14 @@ form textarea:required:valid {
 }
 
 @media only screen and (min-width: 1600px) {
+  .headline {
+    bottom: 20rem;
+    padding: 0 12rem 0 15rem;
+  }
+}
+
+
+@media only screen and (min-width: 1800px) {
   .headline {
     bottom: 20rem;
     padding: 0 12rem 0 20rem;
@@ -3267,7 +3291,7 @@ form textarea:required:valid {
 
 @media only screen and (min-width: 1400px) {
   .grid-item {
-    padding: 0 2.5rem;
+    /* padding: 0 2.5rem; */
     /* margin-top: 5rem; */
   }
 }
@@ -4208,7 +4232,7 @@ form textarea:required:valid {
 }
 
 .gallery__descr h5,
-.gallery__descr p, .gallery__descr img {
+.gallery__descr p, .gallery__descr img, .gallery__descr a {
   display: none;
 }
 
@@ -4667,6 +4691,14 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Tools Start */
 /* ------------------------------------------------*/
+
+@media only screen and (min-width: 1200px) and (max-width: 1270px) {
+  .tools {
+    gap: 0 !important;
+    overflow-x: hidden;
+  }
+}
+
 .tools-cards, .content__card {
   padding: 0 0.5rem;
   display: none; 
@@ -4804,6 +4836,7 @@ form textarea:required:valid {
 
 .tools-cards__icon__project {
   width: 26px;
+  height: 26px;
 }
 .tools-cards__caption {
   line-height: 1;
@@ -4858,7 +4891,17 @@ form textarea:required:valid {
   .testimonials {
     padding-top: 0!important;
   }
+}
 
+
+@media only screen and (min-width: 1400px) {
+  .testimonials {
+    padding: 16rem 0rem 16rem 0rem !important;
+  }
+
+  .testimonials-card {
+    padding: 5rem;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -5450,12 +5493,12 @@ form textarea:required:valid {
 }
 
 .decor-footer {
-  margin-bottom: 5rem;
+  height: 60px !important;
 }
 
 @media only screen and (min-width: 990px) {
   .decor-footer {
-    margin-bottom: 0rem;
+    height: 0 !important;
   }
 }
 
