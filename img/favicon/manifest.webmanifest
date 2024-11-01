@@ -1,6 +1,6 @@
 {
-  "name": "CV/Resume Starter Template",
-  "short_name": "CV/Resume",
+  "name": "Felipe Alves Portfolio",
+  "short_name": "Felipe Alves Dev",
   "icons": [
     { "src": "/img/favicon/android-icon-192.png", "type": "image/png", "sizes": "192x192" },
     { "src": "/img/favicon/android-icon-512.png", "type": "image/png", "sizes": "512x512" }
