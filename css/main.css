@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Zen+Kaku+Gothic+New&display=swap');
  
 @font-face {
-  font-family: 'JustSans';
+  font-family: 'JustSans'; 
   src: url('/fonts/JustSans/JUST\ Sans\ Bold.woff2') format('woff2'),
     url('/fonts/JustSans/JUST\ Sans\ Bold.woff') format('woff'),
     url('/fonts/JustSans/JUST\ Sans\ ExBold.woff2') format('woff2'),
