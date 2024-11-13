@@ -219,11 +219,11 @@
           </div>
           <div id="video-container"></div>
           <!-- <video src="img/header-mobile-memoji.webm" autoplay loop muted playsinline class="header-mobile-memoji"></video> -->
-          <!-- <video src="img/header-memoji.webm" autoplay loop muted class="header-memoji"> -->
-            <!-- <source src="img/memoji.mp4" type="video/mp4"> -->
-            <!-- Seu navegador não suporta vídeo HTML5.
+          <video src="img/header-memoji.webm" autoplay loop muted class="header-memoji">
+            <source src="img/memoji.mp4" type="video/mp4"> 
+            Seu navegador não suporta vídeo HTML5.
 
-          </video> -->
+          </video>
           <!-- <img src="img/coc-o-unscreen.gif" alt="" style="width: 1340px;" class="header-memoji"> -->
         </div>
         <!-- <div class="text-center">
@@ -1509,31 +1509,6 @@
       videoContainer.innerHTML = `
         <video src="img/header-mobile-memoji.webm" autoplay loop muted playsinline class="header-mobile-memoji"></video>
       `;
-    }
-
-    //MAC
-
-    // Função para detectar se o sistema é macOS
-    function isMac() {
-      return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-    }
-
-    // Função para detectar se o navegador é Safari
-    function isSafari() {
-      return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-
-    // Verifica se o sistema é macOS e se o navegador é Safari
-    if (isMac() && isSafari()) {
-      // Usuário está em um Mac e usando Safari
-      videoContainer.innerHTML = `
-      <video src="img/header-memoji-safari.mp4" autoplay loop muted playsinline class="header-memoji"></video>
-    `;
-    } else {
-      // Não é Safari em um Mac
-      videoContainer.innerHTML = `
-      <video src="img/header-memoji.webm" autoplay loop muted playsinline class="header-memoji"></video>
-    `;
     }
   </script>
   <script>
